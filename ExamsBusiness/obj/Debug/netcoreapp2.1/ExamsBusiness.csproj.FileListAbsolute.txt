@@ -7,3 +7,11 @@ C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusi
 C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyInfo.cs
 C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.dll
 C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.pdb
+C:\CDP\SOA\SOA-POC\ExamsBusiness\bin\Debug\netcoreapp2.1\ExamsBusiness.deps.json
+C:\CDP\SOA\SOA-POC\ExamsBusiness\bin\Debug\netcoreapp2.1\ExamsBusiness.dll
+C:\CDP\SOA\SOA-POC\ExamsBusiness\bin\Debug\netcoreapp2.1\ExamsBusiness.pdb
+C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.dll
+C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.pdb

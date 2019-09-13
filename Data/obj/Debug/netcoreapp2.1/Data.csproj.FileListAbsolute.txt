@@ -6,3 +6,12 @@ C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfoI
 C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfo.cs
 C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.dll
 C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.pdb
+C:\CDP\SOA\SOA-POC\Data\obj\Debug\netcoreapp2.1\Data.csprojAssemblyReference.cache
+C:\CDP\SOA\SOA-POC\Data\obj\Debug\netcoreapp2.1\Data.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\Data\bin\Debug\netcoreapp2.1\Data.deps.json
+C:\CDP\SOA\SOA-POC\Data\bin\Debug\netcoreapp2.1\Data.dll
+C:\CDP\SOA\SOA-POC\Data\bin\Debug\netcoreapp2.1\Data.pdb
+C:\CDP\SOA\SOA-POC\Data\obj\Debug\netcoreapp2.1\Data.dll
+C:\CDP\SOA\SOA-POC\Data\obj\Debug\netcoreapp2.1\Data.pdb

@@ -7,3 +7,12 @@ C:\Users\dosama\source\repos\SOA\Messaging\obj\Debug\netcoreapp2.1\Messaging.Ass
 C:\Users\dosama\source\repos\SOA\Messaging\obj\Debug\netcoreapp2.1\Messaging.AssemblyInfo.cs
 C:\Users\dosama\source\repos\SOA\Messaging\obj\Debug\netcoreapp2.1\Messaging.dll
 C:\Users\dosama\source\repos\SOA\Messaging\obj\Debug\netcoreapp2.1\Messaging.pdb
+C:\CDP\SOA\SOA-POC\Messaging\bin\Debug\netcoreapp2.1\Messaging.deps.json
+C:\CDP\SOA\SOA-POC\Messaging\bin\Debug\netcoreapp2.1\Messaging.dll
+C:\CDP\SOA\SOA-POC\Messaging\bin\Debug\netcoreapp2.1\Messaging.pdb
+C:\CDP\SOA\SOA-POC\Messaging\obj\Debug\netcoreapp2.1\Messaging.csprojAssemblyReference.cache
+C:\CDP\SOA\SOA-POC\Messaging\obj\Debug\netcoreapp2.1\Messaging.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\Messaging\obj\Debug\netcoreapp2.1\Messaging.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\Messaging\obj\Debug\netcoreapp2.1\Messaging.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\Messaging\obj\Debug\netcoreapp2.1\Messaging.dll
+C:\CDP\SOA\SOA-POC\Messaging\obj\Debug\netcoreapp2.1\Messaging.pdb

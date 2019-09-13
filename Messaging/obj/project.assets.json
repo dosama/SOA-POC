@@ -6300,11 +6300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dosama\\source\\repos\\SOA\\Messaging\\Messaging.csproj",
+      "projectUniqueName": "C:\\CDP\\SOA\\SOA-POC\\Messaging\\Messaging.csproj",
       "projectName": "Messaging",
-      "projectPath": "C:\\Users\\dosama\\source\\repos\\SOA\\Messaging\\Messaging.csproj",
+      "projectPath": "C:\\CDP\\SOA\\SOA-POC\\Messaging\\Messaging.csproj",
       "packagesPath": "C:\\Users\\dosama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dosama\\source\\repos\\SOA\\Messaging\\obj\\",
+      "outputPath": "C:\\CDP\\SOA\\SOA-POC\\Messaging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

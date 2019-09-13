@@ -6,3 +6,11 @@ C:\Users\dosama\source\repos\SOA\Infrastructure\obj\Debug\netcoreapp2.1\Infrastr
 C:\Users\dosama\source\repos\SOA\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.AssemblyInfo.cs
 C:\Users\dosama\source\repos\SOA\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.dll
 C:\Users\dosama\source\repos\SOA\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.pdb
+C:\CDP\SOA\SOA-POC\Infrastructure\bin\Debug\netcoreapp2.1\Infrastructure.deps.json
+C:\CDP\SOA\SOA-POC\Infrastructure\bin\Debug\netcoreapp2.1\Infrastructure.dll
+C:\CDP\SOA\SOA-POC\Infrastructure\bin\Debug\netcoreapp2.1\Infrastructure.pdb
+C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.dll
+C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.pdb

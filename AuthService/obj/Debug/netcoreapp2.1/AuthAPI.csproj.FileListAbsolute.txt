@@ -12,3 +12,17 @@ C:\Users\dosama\source\repos\SOA\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.Ass
 C:\Users\dosama\source\repos\SOA\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.RazorTargetAssemblyInfo.cache
 C:\Users\dosama\source\repos\SOA\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.dll
 C:\Users\dosama\source\repos\SOA\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.pdb
+C:\CDP\SOA\SOA-POC\AuthService\bin\Debug\netcoreapp2.1\AuthAPI.deps.json
+C:\CDP\SOA\SOA-POC\AuthService\bin\Debug\netcoreapp2.1\AuthAPI.runtimeconfig.json
+C:\CDP\SOA\SOA-POC\AuthService\bin\Debug\netcoreapp2.1\AuthAPI.runtimeconfig.dev.json
+C:\CDP\SOA\SOA-POC\AuthService\bin\Debug\netcoreapp2.1\AuthAPI.dll
+C:\CDP\SOA\SOA-POC\AuthService\bin\Debug\netcoreapp2.1\AuthAPI.pdb
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.csprojAssemblyReference.cache
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.RazorAssemblyInfo.cache
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.RazorAssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.RazorTargetAssemblyInfo.cache
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.dll
+C:\CDP\SOA\SOA-POC\AuthService\obj\Debug\netcoreapp2.1\AuthAPI.pdb

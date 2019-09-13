@@ -6,3 +6,11 @@ C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\Repor
 C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.AssemblyInfo.cs
 C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.dll
 C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.pdb
+C:\CDP\SOA\SOA-POC\ReportingBusiness\bin\Debug\netcoreapp2.1\ReportingBusiness.deps.json
+C:\CDP\SOA\SOA-POC\ReportingBusiness\bin\Debug\netcoreapp2.1\ReportingBusiness.dll
+C:\CDP\SOA\SOA-POC\ReportingBusiness\bin\Debug\netcoreapp2.1\ReportingBusiness.pdb
+C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.dll
+C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.pdb

@@ -4555,6 +4555,30 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.1.1",
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.dll": {}
+        }
+      },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
       "Messaging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -12277,6 +12301,16 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Data.csproj",
+      "msbuildProject": "../Data/Data.csproj"
+    },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
     "Messaging/1.0.0": {
       "type": "project",
       "path": "../Messaging/Messaging.csproj",
@@ -12285,6 +12319,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Data >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Messaging >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
@@ -12298,11 +12334,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dosama\\source\\repos\\SOA\\StudentsService\\StudentsAPI.csproj",
+      "projectUniqueName": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\StudentsAPI.csproj",
       "projectName": "StudentsAPI",
-      "projectPath": "C:\\Users\\dosama\\source\\repos\\SOA\\StudentsService\\StudentsAPI.csproj",
+      "projectPath": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\StudentsAPI.csproj",
       "packagesPath": "C:\\Users\\dosama\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dosama\\source\\repos\\SOA\\StudentsService\\obj\\",
+      "outputPath": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12321,8 +12357,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\dosama\\source\\repos\\SOA\\Messaging\\Messaging.csproj": {
-              "projectPath": "C:\\Users\\dosama\\source\\repos\\SOA\\Messaging\\Messaging.csproj"
+            "C:\\CDP\\SOA\\SOA-POC\\Data\\Data.csproj": {
+              "projectPath": "C:\\CDP\\SOA\\SOA-POC\\Data\\Data.csproj"
+            },
+            "C:\\CDP\\SOA\\SOA-POC\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\CDP\\SOA\\SOA-POC\\Infrastructure\\Infrastructure.csproj"
+            },
+            "C:\\CDP\\SOA\\SOA-POC\\Messaging\\Messaging.csproj": {
+              "projectPath": "C:\\CDP\\SOA\\SOA-POC\\Messaging\\Messaging.csproj"
             }
           }
         }

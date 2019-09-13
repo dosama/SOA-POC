@@ -12,3 +12,17 @@ C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.A
 C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorTargetAssemblyInfo.cache
 C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.dll
 C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.pdb
+C:\CDP\SOA\SOA-POC\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.deps.json
+C:\CDP\SOA\SOA-POC\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.runtimeconfig.json
+C:\CDP\SOA\SOA-POC\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.runtimeconfig.dev.json
+C:\CDP\SOA\SOA-POC\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.dll
+C:\CDP\SOA\SOA-POC\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.pdb
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.csprojAssemblyReference.cache
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.csproj.CoreCompileInputs.cache
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorAssemblyInfo.cache
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorAssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.AssemblyInfoInputs.cache
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.AssemblyInfo.cs
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorTargetAssemblyInfo.cache
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.dll
+C:\CDP\SOA\SOA-POC\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.pdb
