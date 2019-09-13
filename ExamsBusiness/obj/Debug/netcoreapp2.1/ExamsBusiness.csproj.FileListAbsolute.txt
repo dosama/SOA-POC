@@ -1,0 +1,9 @@
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\bin\Debug\netcoreapp2.1\ExamsBusiness.deps.json
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\bin\Debug\netcoreapp2.1\ExamsBusiness.dll
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\bin\Debug\netcoreapp2.1\ExamsBusiness.pdb
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.csprojAssemblyReference.cache
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.dll
+C:\Users\dosama\source\repos\SOA\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.pdb

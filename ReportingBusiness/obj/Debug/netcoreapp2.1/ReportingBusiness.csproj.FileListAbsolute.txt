@@ -1,0 +1,8 @@
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\bin\Debug\netcoreapp2.1\ReportingBusiness.deps.json
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\bin\Debug\netcoreapp2.1\ReportingBusiness.dll
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\bin\Debug\netcoreapp2.1\ReportingBusiness.pdb
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.dll
+C:\Users\dosama\source\repos\SOA\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.pdb

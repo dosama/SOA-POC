@@ -1,0 +1,8 @@
+C:\Users\dosama\source\repos\SOA\Auth Business\bin\Debug\netcoreapp2.1\AuthBusiness.deps.json
+C:\Users\dosama\source\repos\SOA\Auth Business\bin\Debug\netcoreapp2.1\AuthBusiness.dll
+C:\Users\dosama\source\repos\SOA\Auth Business\bin\Debug\netcoreapp2.1\AuthBusiness.pdb
+C:\Users\dosama\source\repos\SOA\Auth Business\obj\Debug\netcoreapp2.1\AuthBusiness.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\Auth Business\obj\Debug\netcoreapp2.1\AuthBusiness.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\Auth Business\obj\Debug\netcoreapp2.1\AuthBusiness.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\Auth Business\obj\Debug\netcoreapp2.1\AuthBusiness.dll
+C:\Users\dosama\source\repos\SOA\Auth Business\obj\Debug\netcoreapp2.1\AuthBusiness.pdb

@@ -1,0 +1,14 @@
+C:\Users\dosama\source\repos\SOA\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.deps.json
+C:\Users\dosama\source\repos\SOA\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.runtimeconfig.json
+C:\Users\dosama\source\repos\SOA\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.runtimeconfig.dev.json
+C:\Users\dosama\source\repos\SOA\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.dll
+C:\Users\dosama\source\repos\SOA\ExamsService\bin\Debug\netcoreapp2.1\ExamsAPI.pdb
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.csprojAssemblyReference.cache
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorAssemblyInfo.cache
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorAssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.RazorTargetAssemblyInfo.cache
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.dll
+C:\Users\dosama\source\repos\SOA\ExamsService\obj\Debug\netcoreapp2.1\ExamsAPI.pdb

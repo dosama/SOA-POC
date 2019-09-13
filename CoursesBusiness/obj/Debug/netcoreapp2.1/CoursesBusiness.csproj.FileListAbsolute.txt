@@ -1,0 +1,8 @@
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\bin\Debug\netcoreapp2.1\CoursesBusiness.deps.json
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\bin\Debug\netcoreapp2.1\CoursesBusiness.dll
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\bin\Debug\netcoreapp2.1\CoursesBusiness.pdb
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.dll
+C:\Users\dosama\source\repos\SOA\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.pdb

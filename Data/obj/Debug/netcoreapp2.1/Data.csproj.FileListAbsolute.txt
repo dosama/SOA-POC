@@ -1,0 +1,8 @@
+C:\Users\dosama\source\repos\SOA\Data\bin\Debug\netcoreapp2.1\Data.deps.json
+C:\Users\dosama\source\repos\SOA\Data\bin\Debug\netcoreapp2.1\Data.dll
+C:\Users\dosama\source\repos\SOA\Data\bin\Debug\netcoreapp2.1\Data.pdb
+C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.dll
+C:\Users\dosama\source\repos\SOA\Data\obj\Debug\netcoreapp2.1\Data.pdb

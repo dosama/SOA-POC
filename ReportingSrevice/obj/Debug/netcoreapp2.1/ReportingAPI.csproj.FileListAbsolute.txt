@@ -1,0 +1,14 @@
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\bin\Debug\netcoreapp2.1\ReportingAPI.deps.json
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\bin\Debug\netcoreapp2.1\ReportingAPI.runtimeconfig.json
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\bin\Debug\netcoreapp2.1\ReportingAPI.runtimeconfig.dev.json
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\bin\Debug\netcoreapp2.1\ReportingAPI.dll
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\bin\Debug\netcoreapp2.1\ReportingAPI.pdb
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.csprojAssemblyReference.cache
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.RazorAssemblyInfo.cache
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.RazorAssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.RazorTargetAssemblyInfo.cache
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.dll
+C:\Users\dosama\source\repos\SOA\ReportingSrevice\obj\Debug\netcoreapp2.1\ReportingAPI.pdb

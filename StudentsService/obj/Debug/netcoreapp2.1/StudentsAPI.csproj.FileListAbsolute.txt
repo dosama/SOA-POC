@@ -1,0 +1,14 @@
+C:\Users\dosama\source\repos\SOA\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.deps.json
+C:\Users\dosama\source\repos\SOA\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.runtimeconfig.json
+C:\Users\dosama\source\repos\SOA\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.runtimeconfig.dev.json
+C:\Users\dosama\source\repos\SOA\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.dll
+C:\Users\dosama\source\repos\SOA\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.pdb
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.csprojAssemblyReference.cache
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.csproj.CoreCompileInputs.cache
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.RazorAssemblyInfo.cache
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.RazorAssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.AssemblyInfoInputs.cache
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.AssemblyInfo.cs
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.RazorTargetAssemblyInfo.cache
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.dll
+C:\Users\dosama\source\repos\SOA\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.pdb
