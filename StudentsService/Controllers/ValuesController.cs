@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Messaging.Interfaces;
-using Messaging.Models;
+﻿using System.Collections.Generic;
+using Infrastructure.Messaging.Interfaces;
+using Infrastructure.Messaging.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace StudentsService.Controllers
+namespace StudentsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
