@@ -14,3 +14,4 @@ C:\CDP\SOA\SOA-POC\StudentsBusiness\obj\Debug\netcoreapp2.1\StudentsBusiness.Ass
 C:\CDP\SOA\SOA-POC\StudentsBusiness\obj\Debug\netcoreapp2.1\StudentsBusiness.AssemblyInfo.cs
 C:\CDP\SOA\SOA-POC\StudentsBusiness\obj\Debug\netcoreapp2.1\StudentsBusiness.dll
 C:\CDP\SOA\SOA-POC\StudentsBusiness\obj\Debug\netcoreapp2.1\StudentsBusiness.pdb
+C:\CDP\SOA\SOA-POC\StudentsBusiness\obj\Debug\netcoreapp2.1\StudentsBusiness.csprojAssemblyReference.cache

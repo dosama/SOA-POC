@@ -24,10 +24,8 @@ C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.runtimeco
 C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.dll
 C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\StudentsAPI.pdb
 C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\Data.dll
-C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\Infrastructure.dll
 C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\Messaging.dll
 C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\Data.pdb
-C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\Infrastructure.pdb
 C:\CDP\SOA\SOA-POC\StudentsService\bin\Debug\netcoreapp2.1\Messaging.pdb
 C:\CDP\SOA\SOA-POC\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.RazorTargetAssemblyInfo.cache
 C:\CDP\SOA\SOA-POC\StudentsService\obj\Debug\netcoreapp2.1\StudentsAPI.csproj.CopyComplete

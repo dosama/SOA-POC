@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using Infrastructure.Messaging.Interfaces;
-using Infrastructure.Messaging.Models;
+using Messaging.Interfaces;
+using Messaging.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace StudentsAPI.Controllers

@@ -14,3 +14,4 @@ C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.Assembl
 C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.AssemblyInfo.cs
 C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.dll
 C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.pdb
+C:\CDP\SOA\SOA-POC\Infrastructure\obj\Debug\netcoreapp2.1\Infrastructure.csprojAssemblyReference.cache

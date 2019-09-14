@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Infrastructure.Messaging.Interfaces;
-using Infrastructure.Messaging.Models;
+using Messaging.Interfaces;
+using Messaging.Models;
 
 namespace StudentsAPI.Messaging
 {
