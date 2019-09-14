@@ -24,6 +24,7 @@ namespace StudentsService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+
             var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
 
             services.AddDbContext<SOAContext>
@@ -32,6 +33,8 @@ namespace StudentsService
             services.AddSingleton<IServiceBusTopicSender, StudentsServiceBusTopicSender>();
             services.AddSingleton<IServiceBusTopicSubscriber, StudentsServiceBusTopicSubscriber>();
             services.AddTransient<IProcessData, StudentProcessData>();
+
+         
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
