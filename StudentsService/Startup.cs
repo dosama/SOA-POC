@@ -1,12 +1,14 @@
-﻿using Messaging.Interfaces;
+﻿using Data.DBContext;
+using Messaging.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using StudentsAPI.Messaging;
+using StudentsService.Messaging;
 
-namespace StudentsAPI
+namespace StudentsService
 {
     public class Startup
     {
@@ -24,8 +26,8 @@ namespace StudentsAPI
 
             var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
 
-//            services.AddDbContext<BloggingContext>
-//                (options => options.UseSqlServer(connection));
+            services.AddDbContext<SOAContext>
+                (options => options.UseSqlServer(connection));
 
             services.AddSingleton<IServiceBusTopicSender, StudentsServiceBusTopicSender>();
             services.AddSingleton<IServiceBusTopicSubscriber, StudentsServiceBusTopicSubscriber>();

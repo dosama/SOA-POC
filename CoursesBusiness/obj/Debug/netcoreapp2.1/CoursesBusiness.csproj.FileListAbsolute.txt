@@ -14,3 +14,4 @@ C:\CDP\SOA\SOA-POC\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.Assem
 C:\CDP\SOA\SOA-POC\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.AssemblyInfo.cs
 C:\CDP\SOA\SOA-POC\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.dll
 C:\CDP\SOA\SOA-POC\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.pdb
+C:\CDP\SOA\SOA-POC\CoursesBusiness\obj\Debug\netcoreapp2.1\CoursesBusiness.csprojAssemblyReference.cache

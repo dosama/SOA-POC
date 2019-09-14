@@ -5,4 +5,8 @@
     <RootNamespace>Auth_Business</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
 </Project>

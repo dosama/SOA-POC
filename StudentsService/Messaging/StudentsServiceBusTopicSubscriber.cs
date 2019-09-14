@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Messaging.Interfaces;
@@ -11,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace StudentsAPI.Messaging
+namespace StudentsService.Messaging
 {
     internal class StudentsServiceBusTopicSubscriber : IServiceBusTopicSubscriber
     {

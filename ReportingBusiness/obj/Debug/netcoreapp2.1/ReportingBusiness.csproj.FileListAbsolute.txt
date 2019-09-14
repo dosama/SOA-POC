@@ -14,3 +14,4 @@ C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.A
 C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.AssemblyInfo.cs
 C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.dll
 C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.pdb
+C:\CDP\SOA\SOA-POC\ReportingBusiness\obj\Debug\netcoreapp2.1\ReportingBusiness.csprojAssemblyReference.cache

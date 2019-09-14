@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Messaging.Interfaces;
 using Messaging.Models;
 
-namespace StudentsAPI.Messaging
+namespace StudentsService.Messaging
 {
     internal class StudentProcessData:IProcessData
     {

@@ -1,9 +1,7 @@
-﻿using System;
-using Data.Models;
+﻿using Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Data
+namespace Data.DBContext
 {
     public partial class SOAContext : DbContext
     {

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Models;
 
-namespace Data
+namespace Data.Models
 {
     public partial class Users
     {

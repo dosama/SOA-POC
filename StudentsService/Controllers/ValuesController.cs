@@ -3,7 +3,7 @@ using Messaging.Interfaces;
 using Messaging.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace StudentsAPI.Controllers
+namespace StudentsService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -15,3 +15,4 @@ C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyI
 C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.AssemblyInfo.cs
 C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.dll
 C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.pdb
+C:\CDP\SOA\SOA-POC\ExamsBusiness\obj\Debug\netcoreapp2.1\ExamsBusiness.csprojAssemblyReference.cache

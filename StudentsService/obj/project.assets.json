@@ -12318,9 +12318,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\StudentsAPI.csproj",
-      "projectName": "StudentsAPI",
-      "projectPath": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\StudentsAPI.csproj",
+      "projectUniqueName": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\StudentsService.csproj",
+      "projectName": "StudentsService",
+      "projectPath": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\StudentsService.csproj",
       "packagesPath": "C:\\Users\\dosama\\.nuget\\packages\\",
       "outputPath": "C:\\CDP\\SOA\\SOA-POC\\StudentsService\\obj\\",
       "projectStyle": "PackageReference",
