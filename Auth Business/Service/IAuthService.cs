@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Threading.Tasks;
+using Auth_Business.Models;
 
 namespace Auth_Business.Service
 {
-    public class IAuthService
+    public interface IAuthService
     {
+         Task<LoginResponse> Login(LoginRequest request);
     }
 }

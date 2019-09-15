@@ -1,5 +1,4 @@
 ﻿using Data.DBContext;
-using Data.Repositories.Users;
 
 namespace Data.Repositories.ExamGrades
 {

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Messaging.Interfaces;
-using Messaging.Models;
 using Microsoft.AspNetCore.Mvc;
+using StudentsService.Messaging.Interfaces;
 
 namespace StudentsService.Controllers
 {
@@ -33,7 +32,7 @@ namespace StudentsService.Controllers
         [HttpPost]
         public  void Post([FromBody] string value)
         {
-         _serviceBusTopicSender.SendMessage(new PayloadBase());
+         _serviceBusTopicSender.SendMessage(new object());
 
 //            // Send this to the bus for the other services
 //            await _serviceBusTopicSender.SendMessage(new MyPayload

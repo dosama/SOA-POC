@@ -1,12 +1,11 @@
-﻿using Data.DBContext;
-using Messaging.Interfaces;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using StudentsService.Messaging;
+using StudentsService.Messaging.Interfaces;
 
 namespace StudentsService
 {
@@ -27,9 +26,8 @@ namespace StudentsService
 
             var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
 
-            services.AddDbContext<SOAContext>
-                (options => options.UseSqlServer(connection));
 
+            
             services.AddSingleton<IServiceBusTopicSender, StudentsServiceBusTopicSender>();
             services.AddSingleton<IServiceBusTopicSubscriber, StudentsServiceBusTopicSubscriber>();
             services.AddTransient<IProcessData, StudentProcessData>();

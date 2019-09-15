@@ -1,42 +1,47 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+using AuthService.ViewModels;
+using Auth_Business.Models;
+using Auth_Business.Service;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class AuthController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly IAuthService _authService;
+        private readonly IMapper _mapper;
+        public AuthController(IAuthService authService, IMapper mapper)
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
+            _authService = authService;
+            _mapper = mapper;
         }
 
         // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("login")]
+        public async Task<ActionResult<LoginResponseModelVm>> Login([FromBody] LoginRequestModelVm request)
         {
+            try
+            {
+                if(request == null)
+                    return BadRequest();
+
+                var model = _mapper.Map<LoginRequest>(request);
+                var result = await _authService.Login(model);
+                return Ok( _mapper.Map<LoginResponseModelVm>(result));
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

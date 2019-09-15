@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Data.Repositories.Courses;
 using Data.Repositories.CourseStatus;
 using Data.Repositories.ExamGrades;

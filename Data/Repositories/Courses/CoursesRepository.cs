@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Data.DBContext;
-using Microsoft.EntityFrameworkCore;
+﻿using Data.DBContext;
 
 namespace Data.Repositories.Courses
 {

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
-using Messaging.Interfaces;
-using Messaging.Models;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using ReportingService.Messaging.Interfaces;
 
 namespace ReportingService.Messaging
 {
@@ -26,7 +25,7 @@ namespace ReportingService.Messaging
             );
         }
 
-        public async Task SendMessage(PayloadBase payload)
+        public async Task SendMessage(object payload)
         {
             string data = JsonConvert.SerializeObject(payload);
             Message message = new Message(Encoding.UTF8.GetBytes(data));

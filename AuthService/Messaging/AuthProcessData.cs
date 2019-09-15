@@ -1,12 +1,11 @@
 ﻿using System;
-using Messaging.Interfaces;
-using Messaging.Models;
+using AuthService.Messaging.Interfaces;
 
 namespace AuthService.Messaging
 {
     internal class StudentProcessData:IProcessData
     {
-        public void Process(PayloadBase payload)
+        public void Process(object payload)
         {
             throw new NotImplementedException();
 //            DataServiceSimi.Data.Add(new Payload

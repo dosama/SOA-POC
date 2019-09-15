@@ -1,12 +1,13 @@
 ﻿using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Messaging.Interfaces;
-using Messaging.Models;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using StudentsService.Messaging.Interfaces;
+using IProcessData = CoursesService.Messaging.Interfaces.IProcessData;
+using IServiceBusTopicSubscriber = CoursesService.Messaging.Interfaces.IServiceBusTopicSubscriber;
 
 namespace CoursesService.Messaging
 {
@@ -45,7 +46,7 @@ namespace CoursesService.Messaging
 
         private async Task ProcessMessagesAsync(Message message, CancellationToken token)
         {
-            var myPayload = JsonConvert.DeserializeObject<PayloadBase>(Encoding.UTF8.GetString(message.Body));
+            var myPayload = JsonConvert.DeserializeObject<object>(Encoding.UTF8.GetString(message.Body));
              _processData.Process(myPayload);
             await _subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
         }

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
-using Messaging.Interfaces;
-using Messaging.Models;
+using AuthService.Messaging.Interfaces;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -26,7 +25,7 @@ namespace AuthService.Messaging
             );
         }
 
-        public async Task SendMessage(PayloadBase payload)
+        public async Task SendMessage(object payload)
         {
             string data = JsonConvert.SerializeObject(payload);
             Message message = new Message(Encoding.UTF8.GetBytes(data));

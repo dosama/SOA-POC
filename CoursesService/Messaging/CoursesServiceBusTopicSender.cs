@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Text;
 using System.Threading.Tasks;
-using Messaging.Interfaces;
-using Messaging.Models;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using StudentsService.Messaging.Interfaces;
+using IServiceBusTopicSender = CoursesService.Messaging.Interfaces.IServiceBusTopicSender;
 
 namespace CoursesService.Messaging
 {
@@ -26,7 +26,7 @@ namespace CoursesService.Messaging
             );
         }
 
-        public async Task SendMessage(PayloadBase payload)
+        public async Task SendMessage(object payload)
         {
             string data = JsonConvert.SerializeObject(payload);
             Message message = new Message(Encoding.UTF8.GetBytes(data));
