@@ -18,6 +18,7 @@ namespace Data.Extentions
 
         public static void AddDataService(this IServiceCollection services, string connectionString)
         {
+            
             services.AddDbContext<SOAContext>
                 (options => options.UseSqlServer(connectionString));
             services.AddSingleton<IUsersRepository, UsersRepository>();

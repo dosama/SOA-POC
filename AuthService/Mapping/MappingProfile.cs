@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AuthService.ViewModels;
+﻿using AuthService.ViewModels;
 using Auth_Business.Models;
 using AutoMapper;
 
@@ -17,6 +13,8 @@ namespace AuthService.Mapping
             CreateMap<LoginRequestModelVm, LoginRequest>();
             CreateMap<LoginResponse, LoginResponseModelVm>();
             CreateMap<LoginResponseModelVm, LoginResponse>();
+            CreateMap<UserDetails, UserDetailsVm>();
+            CreateMap<UserDetailsVm, UserDetails>();
         }
     }
 }

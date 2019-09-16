@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using AuthService.ViewModels;
@@ -7,6 +6,8 @@ using Auth_Business.Models;
 using Auth_Business.Service;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using ServiceBusMessaging.Interfaces;
+using ServiceBusMessaging.Models;
 
 namespace AuthService.Controllers
 {
@@ -16,10 +17,12 @@ namespace AuthService.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IMapper _mapper;
-        public AuthController(IAuthService authService, IMapper mapper)
+        private readonly IServiceBusTopicSender _serviceBusTopicSender;
+        public AuthController(IAuthService authService, IMapper mapper, IServiceBusTopicSender serviceBusTopicSender)
         {
             _authService = authService;
             _mapper = mapper;
+            _serviceBusTopicSender = serviceBusTopicSender;
         }
 
         // POST api/values
@@ -33,7 +36,11 @@ namespace AuthService.Controllers
 
                 var model = _mapper.Map<LoginRequest>(request);
                 var result = await _authService.Login(model);
+                 await _serviceBusTopicSender.SendMessage(new Payload());
+
                 return Ok( _mapper.Map<LoginResponseModelVm>(result));
+
+       
 
             }
             catch (Exception e)

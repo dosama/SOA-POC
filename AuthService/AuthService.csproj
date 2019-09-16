@@ -14,10 +14,12 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Azure.ServiceBus" Version="4.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Auth Business\AuthBusiness.csproj" />
+    <ProjectReference Include="..\ServiceBusMessaging\ServiceBusMessaging.csproj" />
   </ItemGroup>
 
 </Project>

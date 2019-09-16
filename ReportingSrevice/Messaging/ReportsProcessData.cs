@@ -1,11 +1,13 @@
 ﻿using System;
-using ReportingService.Messaging.Interfaces;
+using System.Threading.Tasks;
+using ServiceBusMessaging.Interfaces;
+using ServiceBusMessaging.Models;
 
 namespace ReportingService.Messaging
 {
-    internal class ReportProcessData : IProcessData
+    internal class ReportsProcessData : IProcessData
     {
-        public void Process(object payload)
+        public Task Process(Payload payload)
         {
             throw new NotImplementedException();
 //            DataServiceSimi.Data.Add(new Payload

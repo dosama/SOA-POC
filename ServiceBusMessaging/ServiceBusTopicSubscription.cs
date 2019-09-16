@@ -5,28 +5,29 @@ using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using StudentsService.Messaging.Interfaces;
+using ServiceBusMessaging.Interfaces;
+using ServiceBusMessaging.Models;
 
-namespace StudentsService.Messaging
+namespace ServiceBusMessaging
 {
-    internal class StudentsServiceBusTopicSubscriber : IServiceBusTopicSubscriber
+    internal class ServiceBusTopicSubscriber : IServiceBusTopicSubscriber
     {
 
         private readonly IConfiguration _configuration;
         private readonly SubscriptionClient _subscriptionClient;
-        private const string TOPIC_PATH = "mytopic";
-        private const string SUBSCRIPTION_NAME = "mytopicsubscription";
+        private const string TOPIC_PATH = "poc-topic";
+        private const string SUBSCRIPTION_NAME = "PocSubscription";
         private readonly ILogger _logger;
-        private readonly  IProcessData _processData;
-        public StudentsServiceBusTopicSubscriber(IProcessData processData,
+        private readonly IProcessData _processData;
+        public ServiceBusTopicSubscriber(IProcessData processData,
             IConfiguration configuration,
-            ILogger<StudentsServiceBusTopicSubscriber> logger)
+            ILogger<ServiceBusTopicSubscriber> logger)
         {
             _configuration = configuration;
             _logger = logger;
             _processData = processData;
             _subscriptionClient = new SubscriptionClient(
-                _configuration.GetConnectionString("ServiceBusConnectionString"),
+                _configuration["ServiceBusConnectionString"],
                 TOPIC_PATH,
                 SUBSCRIPTION_NAME);
         }
@@ -44,7 +45,7 @@ namespace StudentsService.Messaging
 
         private async Task ProcessMessagesAsync(Message message, CancellationToken token)
         {
-            var myPayload = JsonConvert.DeserializeObject<object>(Encoding.UTF8.GetString(message.Body));
+            var myPayload = JsonConvert.DeserializeObject<Payload>(Encoding.UTF8.GetString(message.Body));
              _processData.Process(myPayload);
             await _subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
         }

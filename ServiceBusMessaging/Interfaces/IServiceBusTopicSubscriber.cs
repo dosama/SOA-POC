@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace AuthService.Messaging.Interfaces
+namespace ServiceBusMessaging.Interfaces
 {
-    public interface IServiceBusTopicSubscriber//<T> where T: TopicSubscriberBase
+    public interface IServiceBusTopicSubscriber
     {
         void RegisterOnMessageHandlerAndReceiveMessages();
         Task CloseSubscriptionClientAsync();

@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ServiceBusMessaging.Extentions;
+using ServiceBusMessaging.Interfaces;
 using StudentsService.Messaging;
-using StudentsService.Messaging.Interfaces;
 
 namespace StudentsService
 {
@@ -23,13 +24,35 @@ namespace StudentsService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
+            });
 
-            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
+
+            //            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
+            //
+            //            services.AddAuthService(connection);
+            //
+            //            var mappingConfig = new MapperConfiguration(mc =>
+            //            {
+            //                mc.AddProfile(new MappingProfile());
+            //            });
+            //
+            //
+            //            IMapper mapper = mappingConfig.CreateMapper();
+            //            services.AddSingleton(mapper);
+            //
+            //            services.AddServiceBusMessaging();
+            //            services.AddTransient<IProcessData, AuthProcessData>();
+            //
+            //            services.AddSwaggerGen(c =>
+            //            {
+            //                c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
+            //            });
 
 
-            
-            services.AddSingleton<IServiceBusTopicSender, StudentsServiceBusTopicSender>();
-            services.AddSingleton<IServiceBusTopicSubscriber, StudentsServiceBusTopicSubscriber>();
+
+            services.AddServiceBusMessaging();
             services.AddTransient<IProcessData, StudentProcessData>();
 
          
@@ -49,11 +72,17 @@ namespace StudentsService
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            var busSubscription =
-                app.ApplicationServices.GetService<IServiceBusTopicSubscriber>();
-            busSubscription.RegisterOnMessageHandlerAndReceiveMessages();
 
-          
+
+            app.UseServiceBusMessagingRegisery();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Values Api V1");
+            });
+
+
+
 
         }
     }

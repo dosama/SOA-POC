@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Auth_Business.Models
+﻿namespace Auth_Business.Models
 {
     public class LoginResponse
     {
+        public bool SessionId { get; set; }
         public bool IsAuthenticated { get; set; }
         public UserDetails UserDetails { get; set; }
     }

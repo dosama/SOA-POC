@@ -1,11 +1,13 @@
 ﻿using System;
-using StudentsService.Messaging.Interfaces;
+using System.Threading.Tasks;
+using ServiceBusMessaging.Interfaces;
+using ServiceBusMessaging.Models;
 
 namespace StudentsService.Messaging
 {
     internal class StudentProcessData:IProcessData
     {
-        public void Process(object payload)
+        public Task Process(Payload payload)
         {
             throw new NotImplementedException();
 //            DataServiceSimi.Data.Add(new Payload

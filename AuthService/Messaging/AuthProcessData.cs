@@ -1,18 +1,16 @@
 ﻿using System;
-using AuthService.Messaging.Interfaces;
+using System.Threading.Tasks;
+using ServiceBusMessaging.Interfaces;
+using ServiceBusMessaging.Models;
 
 namespace AuthService.Messaging
 {
-    internal class StudentProcessData:IProcessData
+    internal class AuthProcessData:IProcessData
     {
-        public void Process(object payload)
+        public Task Process(Payload payload)
         {
             throw new NotImplementedException();
-//            DataServiceSimi.Data.Add(new Payload
-//            {
-//                Name = myPayload.Name,
-//                Goals = myPayload.Goals
-//            });
+
         }
     }
 }
