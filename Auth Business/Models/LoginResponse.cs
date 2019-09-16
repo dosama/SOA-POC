@@ -2,7 +2,7 @@
 {
     public class LoginResponse
     {
-        public bool SessionId { get; set; }
+        public string SessionId { get; set; }
         public bool IsAuthenticated { get; set; }
         public UserDetails UserDetails { get; set; }
     }

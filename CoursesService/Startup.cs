@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using CoursesService.Messaging;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -36,8 +37,8 @@ namespace CoursesService
 //            IMapper mapper = mappingConfig.CreateMapper();
 //            services.AddSingleton(mapper);
 //
-//            services.AddServiceBusMessaging();
-//            services.AddTransient<IProcessData, AuthProcessData>();
+            services.AddServiceBusMessaging();
+            services.AddTransient<IProcessData, CoursesProcessData>();
 
             services.AddSwaggerGen(c =>
             {

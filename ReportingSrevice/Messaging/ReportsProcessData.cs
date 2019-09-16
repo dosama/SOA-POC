@@ -9,12 +9,7 @@ namespace ReportingService.Messaging
     {
         public Task Process(Payload payload)
         {
-            throw new NotImplementedException();
-//            DataServiceSimi.Data.Add(new Payload
-//            {
-//                Name = myPayload.Name,
-//                Goals = myPayload.Goals
-//            });
+            return null;
         }
     }
 }

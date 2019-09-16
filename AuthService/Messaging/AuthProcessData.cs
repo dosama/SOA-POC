@@ -9,8 +9,7 @@ namespace AuthService.Messaging
     {
         public Task Process(Payload payload)
         {
-            throw new NotImplementedException();
-
+            return null;
         }
     }
 }

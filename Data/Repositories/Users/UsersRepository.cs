@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Data.DBContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories.Users
 {
@@ -21,7 +22,7 @@ namespace Data.Repositories.Users
 
         public async Task<Models.Users> GetUserByUserName(string userName)
         {
-            return SOAContext.Users.FirstOrDefault(u => u.UserName == userName);
+            return await SOAContext.Users.FirstOrDefaultAsync(u => u.UserName == userName);
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ServiceBusMessaging.Extentions;
 using ServiceBusMessaging.Interfaces;
+using StudentsBusiness.Extentions;
+using StudentsService.Mapping;
 using StudentsService.Messaging;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace StudentsService
 {
@@ -29,26 +33,26 @@ namespace StudentsService
             });
 
 
-            //            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
-            //
-            //            services.AddAuthService(connection);
-            //
-            //            var mappingConfig = new MapperConfiguration(mc =>
-            //            {
-            //                mc.AddProfile(new MappingProfile());
-            //            });
-            //
-            //
-            //            IMapper mapper = mappingConfig.CreateMapper();
-            //            services.AddSingleton(mapper);
-            //
-            //            services.AddServiceBusMessaging();
-            //            services.AddTransient<IProcessData, AuthProcessData>();
-            //
-            //            services.AddSwaggerGen(c =>
-            //            {
-            //                c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
-            //            });
+            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
+            
+            services.AddStudentsService(connection);
+            
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            
+            
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            
+            services.AddServiceBusMessaging();
+            services.AddTransient<IProcessData, StudentProcessData>();
+            
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
+            });
 
 
 

@@ -29,7 +29,7 @@ namespace Auth_Business.Service
                 {
                     var loggedInUser = await _users.GetUserByUserName(request.UserName);
                      
-                    return new LoginResponse(){IsAuthenticated = true, UserDetails = _mapper.Map<UserDetails>(loggedInUser) };
+                    return new LoginResponse(){IsAuthenticated = true, SessionId = Guid.NewGuid().ToString(), UserDetails = _mapper.Map<UserDetails>(loggedInUser) };
 
                 }
                 return new LoginResponse() { IsAuthenticated = false, UserDetails = null };

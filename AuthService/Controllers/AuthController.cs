@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Threading.Tasks;
+using AuthService.Messaging;
 using AuthService.ViewModels;
 using Auth_Business.Models;
 using Auth_Business.Service;
@@ -25,8 +26,8 @@ namespace AuthService.Controllers
             _serviceBusTopicSender = serviceBusTopicSender;
         }
 
-        // POST api/values
-        [HttpPost("login")]
+      
+        [HttpGet("login")]
         public async Task<ActionResult<LoginResponseModelVm>> Login([FromBody] LoginRequestModelVm request)
         {
             try
@@ -36,7 +37,11 @@ namespace AuthService.Controllers
 
                 var model = _mapper.Map<LoginRequest>(request);
                 var result = await _authService.Login(model);
-                 await _serviceBusTopicSender.SendMessage(new Payload());
+                if (result.IsAuthenticated)
+                {
+                    await _serviceBusTopicSender.SendMessage(new AuthenticationPayload() { ActionName = "User_Authenticated", SessionId = result.SessionId });
+                }
+                
 
                 return Ok( _mapper.Map<LoginResponseModelVm>(result));
 

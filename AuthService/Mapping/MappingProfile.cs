@@ -4,7 +4,7 @@ using AutoMapper;
 
 namespace AuthService.Mapping
 {
-    public class MappingProfile: Profile
+    internal class MappingProfile: Profile
     {
         public MappingProfile()
         {

@@ -3,7 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReportingService.Messaging;
 using ServiceBusMessaging.Extentions;
+using ServiceBusMessaging.Interfaces;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace ReportingService
 {
@@ -21,7 +24,7 @@ namespace ReportingService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
+                     var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
             //
             //            services.AddAuthService(connection);
             //
@@ -34,13 +37,13 @@ namespace ReportingService
             //            IMapper mapper = mappingConfig.CreateMapper();
             //            services.AddSingleton(mapper);
             //
-            //            services.AddServiceBusMessaging();
-            //            services.AddTransient<IProcessData, AuthProcessData>();
-            //
-            //            services.AddSwaggerGen(c =>
-            //            {
-            //                c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
-            //            });
+                        services.AddServiceBusMessaging();
+                        services.AddTransient<IProcessData, ReportsProcessData>();
+            
+                        services.AddSwaggerGen(c =>
+                        {
+                            c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
+                        });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

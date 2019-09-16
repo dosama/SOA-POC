@@ -1,17 +1,15 @@
 ﻿using System;
+using System.Threading.Tasks;
+using ServiceBusMessaging.Interfaces;
+using ServiceBusMessaging.Models;
 
 namespace CoursesService.Messaging
 {
-    internal class CoursesProcessData //:IProcessData
+    internal class CoursesProcessData :IProcessData
     {
-        public void Process(object payload)
+        public Task Process(Payload payload)
         {
-            throw new NotImplementedException();
-//            DataServiceSimi.Data.Add(new Payload
-//            {
-//                Name = myPayload.Name,
-//                Goals = myPayload.Goals
-//            });
+            return null;
         }
     }
 }

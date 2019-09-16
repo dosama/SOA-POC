@@ -4,7 +4,7 @@ using Data.Models;
 
 namespace Auth_Business.Mapping
 {
-    public class MappingProfile: Profile
+    internal class MappingProfile: Profile
     {
         public MappingProfile()
         {
