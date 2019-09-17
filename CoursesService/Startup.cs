@@ -1,4 +1,7 @@
-﻿using CoursesService.Messaging;
+﻿using AutoMapper;
+using CoursesBusiness.Extentions;
+using CoursesService.Mapping;
+using CoursesService.Messaging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,17 +29,7 @@ namespace CoursesService
 
             var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
 
-//            services.AddAuthService(connection);
-//
-//            var mappingConfig = new MapperConfiguration(mc =>
-//            {
-//                mc.AddProfile(new MappingProfile());
-//            });
-//
-//
-//            IMapper mapper = mappingConfig.CreateMapper();
-//            services.AddSingleton(mapper);
-//
+            services.AddCoursesService(connection);
             services.AddServiceBusMessaging();
             services.AddTransient<IProcessData, CoursesProcessData>();
 

@@ -1,4 +1,7 @@
-﻿using Data.DBContext;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Data.DBContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories.Courses
 {
@@ -9,5 +12,14 @@ namespace Data.Repositories.Courses
         }
 
         public SOAContext SOAContext => Context as SOAContext;
+        public async Task<List<Models.Courses>> GetCoursesList()
+        {
+            return await SOAContext.Courses.ToListAsync();
+        }
+
+        public async Task<Models.Courses> GetCourseDetails(int courseId)
+        {
+            return await SOAContext.Courses.Include(u=>u.UserCourses).FirstOrDefaultAsync(u => u.Id == courseId);
+        }
     }
 }
