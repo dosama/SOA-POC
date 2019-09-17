@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Models;
 
-namespace StudentsBusiness.Models
+namespace ReportingBusiness.Models
 {
-    public class StudentDetails
+    public class ExamModel
     {
         public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public int? Duration { get; set; }
         public DateTime? CreatedOn { get; set; }
         public string CreatedBy { get; set; }
         public DateTime? ModifiedOn { get; set; }
         public string ModifiedBy { get; set; }
-        public List<CourseModel> Courses { get; set; }
-        public List<ExamModel> Exams { get; set; }
-
+        public List<StudentDetails> Students { get; set; }
     }
 }

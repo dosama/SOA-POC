@@ -17,7 +17,7 @@ namespace Data.Repositories.Students
 
         public async Task<List<Models.Users>> GetStudentsList()
         {
-            return await SOAContext.Users.ToListAsync();
+            return await SOAContext.Users.Include(u=>u.UserCourses).Include(u=>u.UserExams).ToListAsync();
         }
 
         public async  Task<Models.Users> GetStudentDetails(int studentId)

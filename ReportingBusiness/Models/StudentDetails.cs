@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.Models;
-using StudentsBusiness.Models;
 
-namespace StudentsService.ViewModels
+namespace ReportingBusiness.Models
 {
-    public class StudentDetailsVm
+    public class StudentDetails
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -15,7 +13,7 @@ namespace StudentsService.ViewModels
         public DateTime? ModifiedOn { get; set; }
         public string ModifiedBy { get; set; }
         public List<CourseModel> Courses { get; set; }
-        public List<Exams> Exams { get; set; }
+        public List<ExamModel> Exams { get; set; }
 
     }
 }

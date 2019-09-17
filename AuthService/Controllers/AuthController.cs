@@ -28,24 +28,19 @@ namespace AuthService.Controllers
 
       
         [HttpGet("login")]
-        public async Task<ActionResult<LoginResponseModelVm>> Login([FromBody] LoginRequestModelVm request)
+        public async Task<ActionResult<LoginResponse>> Login([FromBody] LoginRequest request)
         {
             try
             {
                 if(request == null)
                     return BadRequest();
 
-                var model = _mapper.Map<LoginRequest>(request);
-                var result = await _authService.Login(model);
+                var result = await _authService.Login(request);
                 if (result.IsAuthenticated)
                 {
                     await _serviceBusTopicSender.SendMessage(new AuthenticationPayload() { ActionName = "User_Authenticated", SessionId = result.SessionId });
                 }
-                
-
-                return Ok( _mapper.Map<LoginResponseModelVm>(result));
-
-       
+                return Ok(result);
 
             }
             catch (Exception e)
