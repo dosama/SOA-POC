@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WebApp.ViewModels
+namespace WebApplication2.ViewModels
 {
    public class CourseDetailsModelVm
     {

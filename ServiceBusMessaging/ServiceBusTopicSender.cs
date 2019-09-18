@@ -23,7 +23,7 @@ namespace ServiceBusMessaging
             _configuration = configuration;
             _logger = logger;
             _topicClient = new TopicClient(
-                _configuration.GetConnectionString("ServiceBusConnectionString"),
+                _configuration["ServiceBusConnectionString"],
                 TOPIC_PATH
             );
         }

@@ -11,10 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using ServiceBusMessaging.Extentions;
 using ServiceBusMessaging.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
-using WebApp.Data;
-using WebApp.Messaging;
+using WebApplication2.Data;
+using WebApplication2.Messaging;
 
-namespace WebApp
+namespace WebApplication2
 {
     public class Startup
     {
@@ -64,7 +64,7 @@ namespace WebApp
             });
 
             services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, WebAppProcessData>();
+            services.AddTransient<IProcessData, WebApplication2ProcessData>();
 
             services.AddSwaggerGen(c =>
             {

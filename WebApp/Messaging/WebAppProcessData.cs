@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.SignalR;
 using ServiceBusMessaging.Interfaces;
 using ServiceBusMessaging.Models;
 
-namespace WebApp.Messaging
+namespace WebApplication2.Messaging
 {
-    internal  class WebAppProcessData :IProcessData
+    internal  class WebApplication2ProcessData :IProcessData
     {
         public Task Process(Payload payload)
         {

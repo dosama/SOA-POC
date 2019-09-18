@@ -10,13 +10,13 @@ namespace ServiceBusMessaging.Extentions
 
         public static void AddServiceBusMessaging(this IServiceCollection services)
         {
-            services.AddSingleton<IServiceBusTopicSender, ServiceBusTopicSender>();
-            services.AddSingleton<IServiceBusTopicSubscriber, ServiceBusTopicSubscriber>();
-          
+            services.AddTransient<IServiceBusTopicSender, ServiceBusTopicSender>();
+            services.AddTransient<IServiceBusTopicSubscriber, ServiceBusTopicSubscriber>();
+         
         }
 
         public static void UseServiceBusMessagingRegisery(this IApplicationBuilder app)
-        {
+        { 
             var busSubscription =
                 app.ApplicationServices.GetService<IServiceBusTopicSubscriber>();
             busSubscription.RegisterOnMessageHandlerAndReceiveMessages();

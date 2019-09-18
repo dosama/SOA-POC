@@ -47,6 +47,7 @@ namespace WebApp.Controllers
         [Authorize]
         public async Task<IActionResult> Test()
         {
+
             await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "Test"  });
             return Ok("Dina");
         }

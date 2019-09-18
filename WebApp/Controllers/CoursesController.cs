@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ServiceBusMessaging.Interfaces;
 using ServiceBusMessaging.Models;
-using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {

@@ -47,7 +47,7 @@ namespace ServiceBusMessaging
         {
             var myPayload = JsonConvert.DeserializeObject<Payload>(Encoding.UTF8.GetString(message.Body));
              _processData.Process(myPayload);
-            await _subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
+             await _subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
         }
 
         private Task ExceptionReceivedHandler(ExceptionReceivedEventArgs exceptionReceivedEventArgs)

@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ServiceBusMessaging.Interfaces;
 using ServiceBusMessaging.Models;
-using WebApp.ViewModels;
+using WebApplication2.ViewModels;
 
-namespace WebApp.Controllers
+namespace WebApplication2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

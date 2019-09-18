@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApp.Migrations
+namespace WebApplication2.Migrations
 {
     public partial class Auth : Migration
     {

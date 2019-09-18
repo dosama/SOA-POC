@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebApp.ViewModels
+namespace WebApplication2.ViewModels
 {
     public class CourseModelVm
     {

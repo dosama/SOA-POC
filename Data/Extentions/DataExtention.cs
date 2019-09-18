@@ -3,6 +3,7 @@ using Data.Repositories.Courses;
 using Data.Repositories.CourseStatus;
 using Data.Repositories.ExamGrades;
 using Data.Repositories.Exams;
+using Data.Repositories.Students;
 using Data.Repositories.UserCourses;
 using Data.Repositories.UserExams;
 using Data.Repositories.UserRoles;
@@ -20,7 +21,7 @@ namespace Data.Extentions
         {
             
             services.AddDbContext<SOAContext>
-                (options => options.UseSqlServer(connectionString));
+                (options => options.UseSqlServer(connectionString),ServiceLifetime.Singleton);
             services.AddSingleton<IUsersRepository, UsersRepository>();
             services.AddSingleton<IUserRolesRepository, UserRolesRepository>();
             services.AddSingleton<IUserExamsRepository, UserExamsRepository>();
@@ -29,6 +30,7 @@ namespace Data.Extentions
             services.AddSingleton<IExamGradesRepository, ExamGradesRepository>();
             services.AddSingleton<ICourseStatusRepository, CourseStatusRepository>();
             services.AddSingleton<ICoursesRepository, CoursesRepository>();
+            services.AddSingleton<IStudentsRepository, StudentsRepository>();
             services.AddSingleton<IUnitOfWork, UnitOfWork.UnitOfWork>();
         }
 
