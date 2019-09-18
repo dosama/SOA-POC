@@ -5,7 +5,7 @@ namespace ReportingService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ReportsController : ControllerBase
     {
         // GET api/values
         [HttpGet]

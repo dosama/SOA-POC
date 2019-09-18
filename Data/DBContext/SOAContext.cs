@@ -25,7 +25,11 @@ namespace Data.DBContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Server=localhost;Database=SOA;Trusted_Connection=True;ConnectRetryCount=0");
+            }
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

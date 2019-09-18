@@ -27,7 +27,7 @@ namespace CoursesService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
+            var connection = Configuration["DBConnectionString"];
 
             services.AddCoursesService(connection);
             services.AddServiceBusMessaging();

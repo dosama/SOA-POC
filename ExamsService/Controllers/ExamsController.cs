@@ -5,7 +5,7 @@ namespace ExamsService.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ExamsController : ControllerBase
     {
         // GET api/values
         [HttpGet]

@@ -33,31 +33,26 @@ namespace StudentsService
             });
 
 
-            var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
-            
+            var connection = Configuration["DBConnectionString"];
+
             services.AddStudentsService(connection);
             
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
             });
-            
-            
+         
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
             
             services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, StudentProcessData>();
+            services.AddTransient<IProcessData, StudentsProcessData>();
             
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
             });
 
-
-
-            services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, StudentProcessData>();
 
          
         }

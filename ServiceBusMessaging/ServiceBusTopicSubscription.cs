@@ -16,7 +16,7 @@ namespace ServiceBusMessaging
         private readonly IConfiguration _configuration;
         private readonly SubscriptionClient _subscriptionClient;
         private const string TOPIC_PATH = "poc-topic";
-        private const string SUBSCRIPTION_NAME = "PocSubscription";
+        private const string SUBSCRIPTION_NAME = "AllMessages";
         private readonly ILogger _logger;
         private readonly IProcessData _processData;
         public ServiceBusTopicSubscriber(IProcessData processData,

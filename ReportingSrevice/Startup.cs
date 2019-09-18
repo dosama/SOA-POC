@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReportingBusiness.Extentions;
 using ReportingService.Messaging;
 using ServiceBusMessaging.Extentions;
 using ServiceBusMessaging.Interfaces;
@@ -24,10 +25,10 @@ namespace ReportingService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-                     var connection = Configuration.GetConnectionString("ServiceBusConnectionString");
-            //
-            //            services.AddAuthService(connection);
-            //
+            var connection = Configuration["DBConnectionString"];
+            
+            services.AddReportsService(connection);
+            
             //            var mappingConfig = new MapperConfiguration(mc =>
             //            {
             //                mc.AddProfile(new MappingProfile());
@@ -37,7 +38,7 @@ namespace ReportingService
             //            IMapper mapper = mappingConfig.CreateMapper();
             //            services.AddSingleton(mapper);
             //
-                        services.AddServiceBusMessaging();
+            services.AddServiceBusMessaging();
                         services.AddTransient<IProcessData, ReportsProcessData>();
             
                         services.AddSwaggerGen(c =>
