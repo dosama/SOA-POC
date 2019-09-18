@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serviceBusConnectionString : 'Endpoint=sb://poc-service-bus2.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=e5Vw4sN57//CVvC7yurx3TFRTzmR7FAoamVy6xJIoho=',
+  topicName:'poc-topic',
+  subscriptionName:'AllMessages'
 };
 
 /*
