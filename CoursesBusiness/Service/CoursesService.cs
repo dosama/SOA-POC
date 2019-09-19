@@ -4,8 +4,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CoursesBusiness.Models;
 using Data.Repositories.Courses;
-using Data.Repositories.Students;
-using Data.Repositories.UserCourses;
 
 namespace CoursesBusiness.Service
 {
@@ -56,11 +54,12 @@ namespace CoursesBusiness.Service
                 if (courseDetails != null)
                 {
                     result.CourseDetails = _mapper.Map<CourseModel>(courseDetails);
-                    if (result.CourseStudents != null && result.CourseStudents.Count > 0)
+                    if (courseDetails.StudentCourses != null && courseDetails.StudentCourses.Count > 0)
                     {
-                        foreach (var student in result.CourseStudents)
+                        foreach (var item in courseDetails.StudentCourses)
                         {
-                            result.CourseStudents.Add(_mapper.Map<StudentDetails>(student));
+                            var student = _mapper.Map<StudentDetails>(item.Student);
+                            result.CourseStudents.Add(student);
                         }
                     }
                      

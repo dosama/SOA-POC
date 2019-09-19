@@ -1,5 +1,4 @@
 ﻿using System;
-using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using ServiceBusMessaging.Extentions;
 using ServiceBusMessaging.Interfaces;
 using StudentsBusiness.Extentions;
-using StudentsService.Mapping;
 using StudentsService.Messaging;
 using Swashbuckle.AspNetCore.Swagger;
 
@@ -36,15 +34,6 @@ namespace StudentsService
             var connection = Configuration["DBConnectionString"];
 
             services.AddStudentsService(connection);
-            
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile(new MappingProfile());
-            });
-         
-            IMapper mapper = mappingConfig.CreateMapper();
-            services.AddSingleton(mapper);
-            
             services.AddServiceBusMessaging();
             services.AddTransient<IProcessData, StudentsProcessData>();
             

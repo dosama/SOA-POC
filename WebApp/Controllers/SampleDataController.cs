@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication2.Controllers
+namespace WebApp.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller

@@ -1,12 +1,8 @@
 ﻿using System;
 using Data.Repositories.Courses;
-using Data.Repositories.CourseStatus;
-using Data.Repositories.ExamGrades;
 using Data.Repositories.Exams;
-using Data.Repositories.UserCourses;
-using Data.Repositories.UserExams;
-using Data.Repositories.UserRoles;
-using Data.Repositories.Users;
+using Data.Repositories.Students;
+
 
 namespace Data.UnitOfWork
 {
@@ -14,12 +10,8 @@ namespace Data.UnitOfWork
     {
         ICoursesRepository Courses { get; }
         IExamsRepository Exams { get; }
-        IUsersRepository Users { get; }
-        ICourseStatusRepository CourseStatus { get; }
-        IExamGradesRepository ExamGrades { get; }
-        IUserCoursesRepository UserCourses { get; }
-        IUserExamsRepository UserExams { get; }
-        IUserRolesRepository UserRoles { get; }
+        IStudentsRepository Students { get; }
+
         int Save();
     }
 }

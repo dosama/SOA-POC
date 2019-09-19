@@ -7,7 +7,7 @@ namespace Data.Models
     {
         public Exams()
         {
-            UserExams = new HashSet<UserExams>();
+            StudentExams = new HashSet<StudentExams>();
         }
 
         public int Id { get; set; }
@@ -19,6 +19,6 @@ namespace Data.Models
         public DateTime? ModifiedOn { get; set; }
         public string ModifiedBy { get; set; }
 
-        public ICollection<UserExams> UserExams { get; set; }
+        public ICollection<StudentExams> StudentExams { get; set; }
     }
 }

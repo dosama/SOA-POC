@@ -1,3 +1,5 @@
+using System;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -44,12 +46,126 @@ namespace WebApp.Controllers
             return Ok("Dina");
         }
 
-        [Authorize]
+    //  [Authorize]
         public async Task<IActionResult> Test()
         {
 
             await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "Test"  });
             return Ok("Dina");
         }
+
+        [HttpGet]
+        public async Task<ActionResult> Courses()
+        {
+            try
+            {
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetCourses" });
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
+        [HttpGet("courses/{id}")]
+        public async Task<ActionResult> GetCourseDetails(int id)
+        {
+            try
+            {
+
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetCourseDetails", JsonContent = id.ToString() });
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Exams()
+        {
+            try
+            {
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetExams" });
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
+        [HttpGet("exams/{id}")]
+        public async Task<ActionResult> GetExamDetails(int id)
+        {
+            try
+            {
+
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetExamDetails", JsonContent = id.ToString() });
+                return Ok();
+
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GenerateReport()
+        {
+            try
+            {
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GenerateReport" });
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> Students()
+        {
+            try
+            {
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetStudents" });
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
+        [HttpGet("students/{id}")]
+        public async Task<ActionResult> GetStudentDetails(int id)
+        {
+            try
+            {
+
+                await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetStudentDetails", JsonContent = id.ToString() });
+                return Ok();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
+        }
+
     }
 }

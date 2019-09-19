@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using ExamsBusiness.Service;
 using Newtonsoft.Json;
 using ServiceBusMessaging.Interfaces;

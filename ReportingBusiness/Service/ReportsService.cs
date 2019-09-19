@@ -5,7 +5,6 @@ using AutoMapper;
 using Data.Repositories.Courses;
 using Data.Repositories.Exams;
 using Data.Repositories.Students;
-using Data.Repositories.Users;
 using ReportingBusiness.Models;
 
 namespace ReportingBusiness.Service
@@ -35,10 +34,19 @@ namespace ReportingBusiness.Service
                 foreach (var item in exams)
                 {
                     var exam = _mapper.Map<ExamModel>(item);
+                    if (item.StudentExams != null && item.StudentExams.Count > 0)
+                    {
+                        foreach (var record in item.StudentExams)
+                        {
+                            var student = _mapper.Map<StudentDetails>(record.Student);
+                            exam.Students.Add(student);
+                        }
+                    }
                     examsData.Add(exam);
                 }
             }
             return examsData;
+
         }
 
         private async Task<List<StudentDetails>> GetStudentDetailsData()
@@ -51,6 +59,23 @@ namespace ReportingBusiness.Service
                 foreach (var item in students)
                 {
                     var student = _mapper.Map<StudentDetails>(item);
+
+                    if (item.StudentExams != null && item.StudentExams.Count > 0)
+                    {
+                        foreach (var record in item.StudentExams)
+                        {
+                            student.Exams.Add(_mapper.Map<ExamModel>(record.Exam));
+                        }
+                    }
+
+                    if (item.StudentCourses != null && item.StudentCourses.Count > 0)
+                    {
+                        foreach (var record in item.StudentCourses)
+                        {
+                            student.Courses.Add(_mapper.Map<CourseModel>(record.Course));
+                        }
+                    }
+
                     studentsResult.Add(student);
                 }
             }
@@ -69,6 +94,14 @@ namespace ReportingBusiness.Service
                 foreach (var item in courses)
                 {
                     var course = _mapper.Map<CourseModel>(item);
+                    if (item.StudentCourses != null && item.StudentCourses.Count > 0)
+                    {
+                        foreach (var record in item.StudentCourses)
+                        {
+                            var student = _mapper.Map<StudentDetails>(record.Student);
+                            course.Students.Add(student);
+                        }
+                    }
                     coursesResult.Add(course);
                 }
             }
@@ -78,15 +111,24 @@ namespace ReportingBusiness.Service
 
         public async Task<ReportModel> GenerateReport()
         {
-            
-            var result = new ReportModel
+            try
             {
-                Exams = await GetExamsData(),
-                Students = await GetStudentDetailsData(),
-                Courses = await GetCoursesData()
-            };
+                var result = new ReportModel
+                {
+                    Exams = await GetExamsData(),
+                    Students = await GetStudentDetailsData(),
+                    Courses = await GetCoursesData()
+                };
 
-            return result;
+                return result;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+         
 
         }
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Data.Repositories.Students;
-using Data.Repositories.Users;
 using StudentsBusiness.Models;
 
 namespace StudentsBusiness.Service
@@ -49,8 +48,26 @@ namespace StudentsBusiness.Service
         {
             try
             {
+
                var studentDetails = await _students.GetStudentDetails(studentId);
-                return _mapper.Map<StudentDetails>(studentDetails);
+                var result = _mapper.Map<StudentDetails>(studentDetails);
+                if (studentDetails.StudentExams != null && studentDetails.StudentExams.Count > 0)
+                {
+                    foreach (var item in studentDetails.StudentExams)
+                    {
+                        result.Exams.Add(_mapper.Map<ExamModel>(item.Exam));
+                    }
+                }
+
+                if (studentDetails.StudentCourses != null && studentDetails.StudentCourses.Count > 0)
+                {
+                    foreach (var item in studentDetails.StudentCourses)
+                    {
+                        result.Courses.Add(_mapper.Map<CourseModel>(item.Course));
+                    }
+                }
+
+                return result;
             }
             catch (Exception e)
             {

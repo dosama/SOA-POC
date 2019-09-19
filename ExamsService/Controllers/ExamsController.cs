@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
+using ExamsBusiness.Models;
+using ExamsBusiness.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExamsService.Controllers
@@ -7,36 +12,43 @@ namespace ExamsService.Controllers
     [ApiController]
     public class ExamsController : ControllerBase
     {
-        // GET api/values
+        private readonly IExamsService _examsService;
+        public ExamsController(IExamsService examsService)
+        {
+            _examsService = examsService;
+        }
+
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<List<ExamModel>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                var exams = await _examsService.GetExamsList();
+
+                return Ok(exams);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public async Task<ActionResult<ExamDetailsModel>> Get(int id)
         {
-            return "value";
-        }
+            try
+            {
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+                var exam = await _examsService.GetExamDetails(id);
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+                return Ok(exam);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
         }
     }
 }

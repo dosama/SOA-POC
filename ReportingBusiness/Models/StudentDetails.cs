@@ -5,6 +5,11 @@ namespace ReportingBusiness.Models
 {
     public class StudentDetails
     {
+        public StudentDetails()
+        {
+            Courses = new List<CourseModel>();
+            Exams = new List<ExamModel>();
+        }
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

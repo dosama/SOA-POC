@@ -28,23 +28,14 @@ namespace ReportingService
             var connection = Configuration["DBConnectionString"];
             
             services.AddReportsService(connection);
-            
-            //            var mappingConfig = new MapperConfiguration(mc =>
-            //            {
-            //                mc.AddProfile(new MappingProfile());
-            //            });
-            //
-            //
-            //            IMapper mapper = mappingConfig.CreateMapper();
-            //            services.AddSingleton(mapper);
-            //
+  
             services.AddServiceBusMessaging();
-                        services.AddTransient<IProcessData, ReportsProcessData>();
+            services.AddTransient<IProcessData, ReportsProcessData>();
             
-                        services.AddSwaggerGen(c =>
-                        {
-                            c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
-                        });
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

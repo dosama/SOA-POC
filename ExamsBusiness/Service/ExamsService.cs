@@ -45,20 +45,20 @@ namespace ExamsBusiness.Service
             }
         }
 
-        public async Task<ExamDetailsModel> GetExamDetails(int ExamId)
+        public async Task<ExamDetailsModel> GetExamDetails(int examId)
         {
             try
             {
                 var result = new ExamDetailsModel();
-                var examDetails = await _examsRepository.GetExamDetails(ExamId);
+                var examDetails = await _examsRepository.GetExamDetails(examId);
                 if (examDetails != null)
                 {
                     result.ExamDetails = _mapper.Map<ExamModel>(examDetails);
-                    if (result.ExamStudents != null && result.ExamStudents.Count > 0)
+                    if (examDetails.StudentExams != null && examDetails.StudentExams.Count > 0)
                     {
-                        foreach (var student in result.ExamStudents)
+                        foreach (var item in examDetails.StudentExams)
                         {
-                            result.ExamStudents.Add(_mapper.Map<StudentDetails>(student));
+                            result.ExamStudents.Add(_mapper.Map<StudentDetails>(item.Student));
                         }
                     }
                      

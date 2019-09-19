@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using CoursesBusiness.Extentions;
-using CoursesService.Mapping;
+﻿using CoursesBusiness.Extentions;
 using CoursesService.Messaging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

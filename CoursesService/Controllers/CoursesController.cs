@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
-using AutoMapper;
+using CoursesBusiness.Models;
 using CoursesBusiness.Service;
-using CoursesService.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoursesService.Controllers
@@ -15,29 +14,20 @@ namespace CoursesService.Controllers
     {
 
         private readonly ICoursesService _coursesService;
-        private readonly IMapper _mapper;
-        public CoursesController(ICoursesService coursesService, IMapper mapper)
+        public CoursesController(ICoursesService coursesService)
         {
             _coursesService = coursesService;
-            _mapper = mapper;
+           
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<CourseModelVm>>> Get()
+        public async Task<ActionResult<List<CourseModel>>> Get()
         {
             try
             {
-                var result = new List<CourseModelVm>();
                 var courses = await _coursesService.GetCoursesList();
-                if (courses != null && courses.Count > 0)
-                {
-                    foreach (var item in courses)
-                    {
-                        var course = _mapper.Map<CourseModelVm>(item);
-                        result.Add(course);
-                    }
-                }
-                return Ok(result);
+               
+                return Ok(courses);
             }
             catch (Exception e)
             {
@@ -47,25 +37,14 @@ namespace CoursesService.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<CourseDetailsModelVm>> Get(int id)
+        public async Task<ActionResult<CourseDetailsModel>> Get(int id)
         {
             try
             {
-
-                var result = new CourseDetailsModelVm();
+                
                 var course = await _coursesService.GetCourseDetails(id);
 
-                 result.CourseDetails = _mapper.Map<CourseModelVm>(course.CourseDetails);
-                if (course.CourseStudents != null && course.CourseStudents.Count > 0)
-                {
-                    foreach (var item in course.CourseStudents)
-                    {
-                        var student = _mapper.Map<StudentDetailsVm>(item);
-                        result.CourseStudents.Add(student);
-                    }
-                }
-
-                return Ok(result);
+                return Ok(course);
             }
             catch (Exception e)
             {

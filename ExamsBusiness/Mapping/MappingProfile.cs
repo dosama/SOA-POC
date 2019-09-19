@@ -9,8 +9,8 @@ namespace ExamsBusiness.Mapping
         public MappingProfile()
         {
             
-            CreateMap<StudentDetails, Users>();
-            CreateMap<Users, StudentDetails>();
+            CreateMap<StudentDetails, Students>();
+            CreateMap<Students, StudentDetails>();
             CreateMap<ExamModel, Exams>();
             CreateMap<Exams, ExamModel>();
         }

@@ -11,10 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using ServiceBusMessaging.Extentions;
 using ServiceBusMessaging.Interfaces;
 using Swashbuckle.AspNetCore.Swagger;
-using WebApplication2.Data;
-using WebApplication2.Messaging;
+using WebApp.Data;
+using WebApp.Messaging;
 
-namespace WebApplication2
+namespace WebApp
 {
     public class Startup
     {
@@ -51,7 +51,7 @@ namespace WebApplication2
                         .AllowCredentials());
             });
 
-            //services.AddSignalR();
+            services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 
@@ -64,7 +64,7 @@ namespace WebApplication2
             });
 
             services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, WebApplication2ProcessData>();
+            services.AddTransient<IProcessData, WebAppProcessData>();
 
             services.AddSwaggerGen(c =>
             {
@@ -89,13 +89,10 @@ namespace WebApplication2
             app.UseHttpsRedirection();
             app.UseCors("CorsPolicy");
 
-//            app.UseSignalR(routes =>
-//            {
-//                routes.MapHub<CoursesHub>("/courses");
-//                routes.MapHub<StudentsHub>("/students");
-//                routes.MapHub<ExamsHub>("/exams");
-//                routes.MapHub<ReportsHub>("/reports");
-//            });
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<SignalRHub>("/signalRhub");
+            });
 
 
             app.UseStaticFiles();
@@ -134,5 +131,7 @@ namespace WebApplication2
 
 
         }
+
+      
     }
 }

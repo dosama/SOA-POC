@@ -4,10 +4,8 @@ using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using ServiceBusMessaging.Interfaces;
-using ServiceBusMessaging.Models;
+using StudentsBusiness.Models;
 using StudentsBusiness.Service;
-using StudentsService.ViewModels;
 
 namespace StudentsService.Controllers
 {
@@ -25,20 +23,13 @@ namespace StudentsService.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<List<StudentDetailsVm>>> Get()
+        public async Task<ActionResult<List<StudentDetails>>> Get()
         {
             try
             {
-                var result = new List<StudentDetailsVm>();
-                var students = await _studentsService.GetStudentsList();
-                if (students != null && students.Count > 0)
-                {
-                    foreach (var item in students)
-                    {
-                        var student = _mapper.Map<StudentDetailsVm>(item);
-                        result.Add(student);
-                    }
-                }
+               
+                var result = await _studentsService.GetStudentsList();
+                
                 return Ok(result);
             }
             catch (Exception e)
@@ -49,14 +40,12 @@ namespace StudentsService.Controllers
         }
 
         [HttpGet("{id}")]
-        public  async Task<ActionResult<StudentDetailsVm>> Get(int id)
+        public  async Task<ActionResult<StudentDetails>> Get(int id)
         {
             try
             {
-                var student = await _studentsService.GetStudentDetails(id);
-               
-                var result = _mapper.Map<StudentDetailsVm>(student);
-                
+                var result = await _studentsService.GetStudentDetails(id);
+           
                 return Ok(result);
             }
             catch (Exception e)

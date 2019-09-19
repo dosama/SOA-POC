@@ -14,12 +14,12 @@ namespace Data.Repositories.Courses
         public SOAContext SOAContext => Context as SOAContext;
         public async Task<List<Models.Courses>> GetCoursesList()
         {
-            return await SOAContext.Courses.ToListAsync();
+            return await SOAContext.Courses.Include(u => u.StudentCourses).ThenInclude(s => s.Student).ToListAsync();
         }
 
         public async Task<Models.Courses> GetCourseDetails(int courseId)
         {
-            return await SOAContext.Courses.Include(u=>u.UserCourses).FirstOrDefaultAsync(u => u.Id == courseId);
+            return await SOAContext.Courses.Include(u=>u.StudentCourses).ThenInclude(s=>s.Student).FirstOrDefaultAsync(u => u.Id == courseId);
         }
     }
 }

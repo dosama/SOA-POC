@@ -1,5 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ReportingBusiness.Models;
+using ReportingBusiness.Service;
 
 namespace ReportingService.Controllers
 {
@@ -7,36 +12,27 @@ namespace ReportingService.Controllers
     [ApiController]
     public class ReportsController : ControllerBase
     {
-        // GET api/values
+        private readonly IReportsService _ReportsService;
+        public ReportsController(IReportsService ReportsService)
+        {
+            _ReportsService = ReportsService;
+        }
+
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<List<ReportModel>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            try
+            {
+                var result = await _ReportsService.GenerateReport();
+
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.InnerException);
+            }
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

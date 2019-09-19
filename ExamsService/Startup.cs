@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using ExamsBusiness.Extentions;
+﻿using ExamsBusiness.Extentions;
 using ExamsService.Messaging;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,16 +27,7 @@ namespace ExamsService
 
             var connection = Configuration["DBConnectionString"];
             
-                        services.AddExamsService(connection);
-            
-//                        var mappingConfig = new MapperConfiguration(mc =>
-//                        {
-//                            mc.AddProfile(new MappingProfile());
-//                        });
-//            
-//            
-//                        IMapper mapper = mappingConfig.CreateMapper();
-//                        services.AddSingleton(mapper);
+            services.AddExamsService(connection);
             
             services.AddServiceBusMessaging();
             services.AddTransient<IProcessData, ExamsProcessData>();

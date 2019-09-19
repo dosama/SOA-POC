@@ -15,21 +15,18 @@ namespace Data.DBContext
         }
 
         public virtual DbSet<Courses> Courses { get; set; }
-        public virtual DbSet<CourseStatus> CourseStatus { get; set; }
-        public virtual DbSet<ExamGrades> ExamGrades { get; set; }
         public virtual DbSet<Exams> Exams { get; set; }
-        public virtual DbSet<UserCourses> UserCourses { get; set; }
-        public virtual DbSet<UserExams> UserExams { get; set; }
-        public virtual DbSet<UserRoles> UserRoles { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<StudentCourses> StudentCourses { get; set; }
+        public virtual DbSet<StudentExams> StudentExams { get; set; }
+        public virtual DbSet<Students> Students { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=localhost;Database=SOA;Trusted_Connection=True;ConnectRetryCount=0");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=localhost;Database=SOA;Trusted_Connection=True;ConnectRetryCount=0");
             }
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -58,50 +55,6 @@ namespace Data.DBContext
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<CourseStatus>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
-
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
-
-                entity.Property(e => e.Status)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<ExamGrades>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
-
-                entity.Property(e => e.Grade)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
-            });
-
             modelBuilder.Entity<Exams>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
@@ -128,11 +81,11 @@ namespace Data.DBContext
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<UserCourses>(entity =>
+            modelBuilder.Entity<StudentCourses>(entity =>
             {
-                entity.HasKey(e => new { e.UserId, e.CourseId });
+                entity.HasKey(e => new { e.StudentId, e.CourseId });
 
-                entity.HasIndex(e => new { e.UserId, e.CourseId })
+                entity.HasIndex(e => new { e.StudentId, e.CourseId })
                     .HasName("IX_UserCourses")
                     .IsUnique();
 
@@ -149,29 +102,23 @@ namespace Data.DBContext
                 entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
 
                 entity.HasOne(d => d.Course)
-                    .WithMany(p => p.UserCourses)
+                    .WithMany(p => p.StudentCourses)
                     .HasForeignKey(d => d.CourseId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserCourses_Courses");
 
-                entity.HasOne(d => d.Status)
-                    .WithMany(p => p.UserCourses)
-                    .HasForeignKey(d => d.StatusId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_UserCourses_CourseStatus");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.UserCourses)
-                    .HasForeignKey(d => d.UserId)
+                entity.HasOne(d => d.Student)
+                    .WithMany(p => p.StudentCourses)
+                    .HasForeignKey(d => d.StudentId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserCourses_Users");
             });
 
-            modelBuilder.Entity<UserExams>(entity =>
+            modelBuilder.Entity<StudentExams>(entity =>
             {
-                entity.HasKey(e => new { e.UserId, e.ExamId });
+                entity.HasKey(e => new { e.StudentId, e.ExamId });
 
-                entity.HasIndex(e => new { e.UserId, e.ExamId })
+                entity.HasIndex(e => new { e.StudentId, e.ExamId })
                     .HasName("IX_UserExams")
                     .IsUnique();
 
@@ -188,46 +135,19 @@ namespace Data.DBContext
                 entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
 
                 entity.HasOne(d => d.Exam)
-                    .WithMany(p => p.UserExams)
+                    .WithMany(p => p.StudentExams)
                     .HasForeignKey(d => d.ExamId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserExams_Exams");
 
-                entity.HasOne(d => d.Grade)
-                    .WithMany(p => p.UserExams)
-                    .HasForeignKey(d => d.GradeId)
-                    .HasConstraintName("FK_UserExams_ExamGrades");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.UserExams)
-                    .HasForeignKey(d => d.UserId)
+                entity.HasOne(d => d.Student)
+                    .WithMany(p => p.StudentExams)
+                    .HasForeignKey(d => d.StudentId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UserExams_Users");
             });
 
-            modelBuilder.Entity<UserRoles>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.CreatedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.CreatedOn).HasColumnType("datetime");
-
-                entity.Property(e => e.ModifiedBy)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
-
-                entity.Property(e => e.RoleName)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<Users>(entity =>
+            modelBuilder.Entity<Students>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
 
@@ -250,21 +170,21 @@ namespace Data.DBContext
                     .IsUnicode(false);
 
                 entity.Property(e => e.ModifiedOn).HasColumnType("datetime");
-
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(50);
-
-                entity.Property(e => e.UserName)
-                    .IsRequired()
-                    .HasMaxLength(50);
-
-                entity.HasOne(d => d.Role)
-                    .WithMany(p => p.Users)
-                    .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Users_UsersRoles");
             });
+
+
+            modelBuilder.Entity<Courses>()
+                .HasData(new Courses() { Id = 1, Title = "Course1", Content = "Course Content" }, new Courses() { Id = 2, Title = "Course2", Content = "Course2 Content" }, new Courses() { Id = 3, Title = "Course3", Content = "Course3 Content" });
+            modelBuilder.Entity<Exams>()
+                .HasData(new Exams() { Id = 1, Title = "Exam1", Content = "Exam Content" }, new Exams() { Id = 2, Title = "Exam2", Content = "Exam2 Content" }, new Exams() { Id = 3, Title = "Exam3", Content = "Exam3 Content" });
+            modelBuilder.Entity<Students>()
+                .HasData(new Students() { Id = 1, FirstName = "User1", LastName = "User1" }, new Students() { Id = 2, FirstName = "User2", LastName = "User2"}, new Students() { Id = 3, FirstName = "User3", LastName = "User3" });
+            modelBuilder.Entity<StudentCourses>()
+                .HasData(new StudentCourses() { StudentId = 1, CourseId = 1 }, new StudentCourses() { StudentId = 1, CourseId = 2 }, new StudentCourses() { StudentId = 1, CourseId = 3 },
+                    new StudentCourses() { StudentId = 2, CourseId = 1 }, new StudentCourses() { StudentId = 2, CourseId = 2 }, new StudentCourses() { StudentId = 3, CourseId = 3 });
+            modelBuilder.Entity<StudentExams>()
+                .HasData(new StudentExams() { StudentId = 1, ExamId = 1 }, new StudentExams() { StudentId = 1, ExamId = 2 }, new StudentExams() { StudentId = 1, ExamId = 3 },
+                    new StudentExams() { StudentId = 2, ExamId = 1 }, new StudentExams() { StudentId = 2, ExamId = 2 }, new StudentExams() { StudentId = 3, ExamId = 3 });
         }
     }
 }
