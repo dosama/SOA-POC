@@ -64,7 +64,7 @@ namespace WebApp
             });
 
             services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, WebAppProcessData>();
+            services.AddSingleton<IProcessData, WebAppProcessData>();
 
             services.AddSwaggerGen(c =>
             {

@@ -35,7 +35,7 @@ namespace StudentsService
 
             services.AddStudentsService(connection);
             services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, StudentsProcessData>();
+            services.AddSingleton<IProcessData, StudentsProcessData>();
             
             services.AddSwaggerGen(c =>
             {

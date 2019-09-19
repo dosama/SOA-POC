@@ -29,7 +29,7 @@ namespace CoursesService
 
             services.AddCoursesService(connection);
             services.AddServiceBusMessaging();
-            services.AddTransient<IProcessData, CoursesProcessData>();
+            services.AddSingleton<IProcessData, CoursesProcessData>();
 
             services.AddSwaggerGen(c =>
             {

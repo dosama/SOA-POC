@@ -13,11 +13,13 @@ namespace WebApp.Controllers
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly IServiceBusTopicSender _serviceBusTopicSender;
+        private readonly IServiceBusTopicSubscriber _busSubscription;
 
-        public HomeController(SignInManager<IdentityUser> signInManager, IServiceBusTopicSender serviceBusTopicSender)
+        public HomeController(SignInManager<IdentityUser> signInManager, IServiceBusTopicSender serviceBusTopicSender, IServiceBusTopicSubscriber busSubscription)
         {
             _signInManager = signInManager;
             _serviceBusTopicSender = serviceBusTopicSender;
+            _busSubscription = busSubscription;
         }
 
         public async Task<IActionResult> Auth(string username, string password)
@@ -46,7 +48,7 @@ namespace WebApp.Controllers
             return Ok("Dina");
         }
 
-    //  [Authorize]
+        [Authorize]
         public async Task<IActionResult> Test()
         {
 
@@ -55,12 +57,13 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult> Courses()
         {
             try
             {
                 await _serviceBusTopicSender.SendMessage(new Payload() { ActionName = "GetCourses" });
-
+             
                 return Ok();
             }
             catch (Exception e)
@@ -71,6 +74,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet("courses/{id}")]
+        [Authorize]
         public async Task<ActionResult> GetCourseDetails(int id)
         {
             try
@@ -88,6 +92,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult> Exams()
         {
             try
@@ -103,6 +108,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet("exams/{id}")]
+        [Authorize]
         public async Task<ActionResult> GetExamDetails(int id)
         {
             try
@@ -121,6 +127,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult> GenerateReport()
         {
             try
@@ -136,6 +143,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult> Students()
         {
             try
@@ -151,6 +159,7 @@ namespace WebApp.Controllers
         }
 
         [HttpGet("students/{id}")]
+        [Authorize]
         public async Task<ActionResult> GetStudentDetails(int id)
         {
             try
