@@ -30,7 +30,7 @@ namespace ExamsService
             services.AddExamsService(connection);
             
             services.AddServiceBusMessaging();
-            services.AddSingleton<IProcessData, ExamsProcessData>();
+            services.AddTransient<IProcessData, ExamsProcessData>();
 
             services.AddSwaggerGen(c =>
             {

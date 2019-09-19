@@ -9,7 +9,7 @@ namespace ServiceBusMessaging.Extentions
 
         public static void AddServiceBusMessaging(this IServiceCollection services)
         {
-            services.AddSingleton<IServiceBusTopicSender, ServiceBusTopicSender>();
+            services.AddTransient<IServiceBusTopicSender, ServiceBusTopicSender>();
             services.AddTransient<IServiceBusTopicSubscriber, ServiceBusTopicSubscriber>();
          
         }

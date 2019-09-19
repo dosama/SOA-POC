@@ -30,7 +30,7 @@ namespace ReportingService
             services.AddReportsService(connection);
   
             services.AddServiceBusMessaging();
-            services.AddSingleton<IProcessData, ReportsProcessData>();
+            services.AddTransient<IProcessData, ReportsProcessData>();
             
             services.AddSwaggerGen(c =>
             {

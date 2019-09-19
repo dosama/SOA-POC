@@ -47,7 +47,7 @@ namespace ServiceBusMessaging
         private async Task ProcessMessagesAsync(Message message, CancellationToken token)
         {
             var myPayload = JsonConvert.DeserializeObject<Payload>(Encoding.UTF8.GetString(message.Body));
-             _processData.Process(myPayload);
+              _processData.Process(myPayload);
              await _subscriptionClient.CompleteAsync(message.SystemProperties.LockToken);
         }
 
